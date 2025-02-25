@@ -14,12 +14,12 @@ const TodoList = () => {
         return axios.get<Todo[]>("https://jsonplaceholder.typicode.com/todos").then((res) => res.data);
     };
 
-    const { data: todos } = useQuery({
+    const { data: todos, error } = useQuery<Todo[], Error>({
         queryKey: ["todos"], // For cashing
         queryFn: fetchTodos // Fetching the data
     });
 
-    // if (error) return <p>{error}</p>;
+    if (error) return <p>{error.message}</p>;
 
     return (
         <ul className="list-group">
