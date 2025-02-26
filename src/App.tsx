@@ -1,9 +1,9 @@
-import TodoList from "./components/react-query/TodoList";
+import PostList from "./components/react-query/PostList";
 
 function App() {
     return (
         <div className="container">
-            <TodoList />
+            <PostList />
         </div>
     );
 }
