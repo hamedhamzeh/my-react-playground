@@ -1,12 +1,11 @@
-import PostList from "./components/react-query/PostList";
-import TodoForm from "./components/react-query/TodoForm";
-import TodoList from "./components/react-query/TodoList";
+import Counter from "./components/state-management/Counter";
+import TaskList from "./components/state-management/TaskList";
 
 function App() {
     return (
         <div className="container">
-            <TodoForm />
-            <TodoList />
+            <Counter />
+            <TaskList />
         </div>
     );
 }
