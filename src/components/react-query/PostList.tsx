@@ -1,5 +1,5 @@
 import { useState } from "react";
-import usePosts from "../../hooks/usePosts";
+import usePosts from "../other/hooks/usePosts";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import React from "react";
 
