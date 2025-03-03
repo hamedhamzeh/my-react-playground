@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { CanceledError } from "../services/api-client";
 import userService, { User } from "../services/user-service";
 import useUsers from "../../hooks/useUsers";
 
@@ -45,10 +43,10 @@ const UserUI = () => {
     return (
         <>
             {error && <p className="text-danger">{error}</p>}
-            {isLoading && <div className="spinner-border"></div>}
             <button className="btn btn-primary mb-3" onClick={addUser}>
                 Add
             </button>
+            {isLoading && <div className="spinner-border d-block"></div>}
             <ul className="list-group">
                 {users.map((user) => (
                     <li key={user.id} className="list-group-item d-flex justify-content-between">

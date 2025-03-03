@@ -2,9 +2,8 @@ import { useState } from "react";
 import ExpenseList from "./components/ExpenseList";
 import ExpenseFilter from "./components/ExpenseFilter";
 import ExpenseForm from "./components/ExpenseForm";
-import categories from "./categories";
 
-function App() {
+function ExpenseTracker() {
     const [selectedCategory, setSelectedCategory] = useState("");
 
     const [expenses, setExpenses] = useState([
@@ -30,4 +29,4 @@ function App() {
     );
 }
 
-export default App;
+export default ExpenseTracker;
